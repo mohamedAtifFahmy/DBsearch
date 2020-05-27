@@ -64,7 +64,7 @@ select distinct(Room_id) from room;
 Select * from client where client_id in (select client_id from client where job= "lawyer");
 Select * from room where room_id > Any (select client_id from client where address= "Tanta");
 Select * from room where room_id = (select Room_id from client where age=26);
-Select client_id from client where room_id=1 union select client_id from client where room_id=2;
+
 
 /*count and group funcations*/
 select count(*) from client;
