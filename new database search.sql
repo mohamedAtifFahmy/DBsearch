@@ -22,6 +22,9 @@ check_in date null,
 check_out date not null,
 room_id int  not null,
 client_id int not null );
+alter table room add foreign key (client_id) references client(client_id);
+alter table reservation add foreign key (client_id) references client(client_id);
+alter table reservation add foreign key (room_id) references room(room_id);                
 /*insert statements*/
 insert into client values("MohamedAliSami",	26,	"lawyer",	"Giza",	"mohamed@gmail.com"	,1	,1 );
 insert into client values("Mohamed Atif",	28	,"Engineer"	,"Cairo"	,"atif@gmail.com",	2,	2);
