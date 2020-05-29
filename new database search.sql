@@ -72,6 +72,7 @@ Select * from room where room_id = (select Room_id from client where age=26);
 /*count and group funcations*/
 select count(*) from client;
 select client_id from client group by Room_id;
+select client_id ,count(*) from room group by floor;
 
 
 /*Joins*/
