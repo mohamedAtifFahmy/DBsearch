@@ -63,6 +63,13 @@ Select client_id from client where room_id=1 union select client_id from client 
 select max(room_id) from room;
 select min(room_id) from room;
 select distinct(Room_id) from room;
+Select client_name from client order by address;
+Select client_name from client order by age desc;
+Select client_name from client where client_name Like 'S%';
+select * from client limit 2;
+
+
+
 /*sub query*/
 Select * from client where client_id in (select client_id from client where job= "lawyer");
 Select * from room where room_id > Any (select client_id from client where address= "Tanta");
