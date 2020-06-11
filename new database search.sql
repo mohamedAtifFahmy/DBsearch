@@ -91,7 +91,7 @@ select client.client_name, client.age, room.room_id from client join room on cli
 
 /*update statements*/
 
-update client set client_name="Modtafa atif" where client_name="MohamedAliSami";
+update client set client_name="Mostafa atif" where client_name="MohamedAliSami";
 update client set age=25 where client_id=2;
 update client set address="desouk" where client_id=3;
 update reservation set  check_in="2020/12/22"  where client_id=1;
