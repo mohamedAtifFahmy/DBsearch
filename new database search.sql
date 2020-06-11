@@ -91,15 +91,15 @@ select client.client_name, client.age, room.room_id from client join room on cli
 
 /*update statements*/
 
-update client set client_id=10 where client_id=4;
-update client set client_id=20 where client_id=2;
-update client set client_id=30 where client_id=3;
-update client set client_id=40 where client_id=1;
+update client set client_name="Modtafa atif" where client_name="MohamedAliSami";
+update client set age=25 where client_id=2;
+update client set address="desouk" where client_id=3;
+update reservation set  check_in="2020/12/22"  where client_id=1;
 update room set floor=1 where floor=5;
 
 /* delete statement*/
-DELETE FROM client WHERE client_id=4;
-DELETE FROM client WHERE client_id=3;
+DELETE FROM reservation  WHERE check_in="2020/12/22";
+DELETE FROM client WHERE address="Tanta";
 DELETE FROM room WHERE floor=5;
-DELETE FROM room WHERE room_id=2;
+DELETE FROM room WHERE floor=2;
 DELETE FROM reservation WHERE id=100;
